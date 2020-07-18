@@ -73,7 +73,7 @@ def error(update, context):
 
 """WHAT TO DO IF USER ENTERED INVALID COMMAND, NOT IMPORTANT"""
 def fallback(update, context):
-    update.message.reply_markdown("Sorry, I couldn't understand your command", reply_markup=main_keyboard_markup)
+    update.message.reply_markdown("Sorry, I couldn't understand your command")
     return INITIAL
 
 def main():
