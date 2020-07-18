@@ -20,6 +20,9 @@ This repository contains the source code for `Build a Simple Telegram Bot Using 
 
 - [Telegram Bot Token](https://core.telegram.org/bots#6-botfather)
 
+- Code Editor ([Visual Studio Code](https://code.visualstudio.com/))
+
+- Telegram Account 
 
 
 ## Steps to run this code
@@ -195,6 +198,11 @@ You can see that I retrieved the text the user entered using `update.message.tex
 - Send an options that the user can select by using [ReplyKeyboardMarkup](https://python-telegram-bot.readthedocs.io/en/stable/telegram.replykeyboardmarkup.html)
 
   ```python
+
+  # Defining the state
+  # The int you pass to range must be the count of the available states for your bot
+  STATE_ONE, STATE_TWO, SELECT_OPTION_STATE = range(3)
+
   # Define your keyboard layout
   options_keyboard = [
       ['Option 1'],

@@ -4,17 +4,16 @@ from dotenv import load_dotenv
 
 from jobCentre import JobCentre
 
-from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, Bot)
-from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, InlineQueryHandler,
-                          ConversationHandler, Dispatcher)
+from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, Dispatcher)
 
 # load the .env variables
 load_dotenv()
 
+# Setting up the bot api key from .env file
 token = os.getenv("BOT_API_KEY")
 
+# Setting up the logging for debugging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-
 logger = logging.getLogger(__name__)
 
 # define the available states the telegram bot can be
