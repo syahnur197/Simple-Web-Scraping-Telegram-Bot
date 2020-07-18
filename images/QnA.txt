@@ -1,0 +1,78 @@
+Q1. What is the package used to get the content of a website?
+    1. Pandas
+    2. requests (answer)
+    3. BeautifulSoup4
+    4. Django
+
+Q2. What is the package used to extract the elements in the page of a website?
+    1. Flask
+    2. Spring Boot
+    3. NumPy
+    4. BeautifulSoup4 (answer)
+
+Q3. How do you extract the word 'JobCentre' in the following tags?
+    ```
+        <h1>My Website</h1>
+        <div class='example'>
+            <h1>Nextacloud</h1>
+            <p>
+                Job centre is a nice website
+            </p>
+        </div>
+        <div class='example'>
+            <h1>JobCentre</h1>
+            <p>
+                Job centre is a nice website
+            </p>
+        </div>
+    ```
+
+    1. jobcentre = soup.find_all("div", _class="example")[0].find_all("h1")[0].text
+    2. jobcentre = soup.find_all("h1")[0].text
+    3. jobcentre = soup.find_all("div", _class="example")[1].find_all("h1")[0].text (answer)
+    4. jobcentre = soup.find_all("h1", _class="example")[2].text
+
+Q4. To whom should you ask Telegram Bot Token?
+    1. The one who shall not be named
+    2. GodFather
+    3. BotDad
+    4. BotFather (answer)
+
+Q5. How do you get user's response to the bot?
+    1. response = update.message.text (answer)
+    2. response = updater.message.text
+    3. response = update.messenger.text
+    4. response = dispatcher.updater.text
+
+Q6. How do you make the bot sends a message respond back to the user?
+    1. dispatcher.message.reply_markup("Enter your message here")
+    2. dispatcher.message.reply_markdown("Enter your message here")
+    3. update.message.reply_markdown("Enter your message here") (answer)
+    4. update.message.reply_markup("Enter your message here")
+
+Q7. For this particular program, what command is used to run the bot?
+    1. pipenv bot.py
+    2. python jobCentre.py
+    3. npm run bot.py
+    4. python bot.py (answer)
+
+Q8. What Python version is required to run this bot?
+    1. Python 3.8 (answer)
+    2. Python 2.8
+    3. Python 1.8
+    4. Python 3.0
+
+Q9. How do you install the project dependencies?
+    1. pip install
+    2. npm install
+    3. pipenv install (answer)
+    4. python install
+
+10. The ConversationHandler is responsible in managing how the bot will handle user responses. 
+In the ConversationHandler there are several arguments used to configure how the bot will respond the user.
+Which of the following arguments are used to configure the scenario where the bot is waiting for response
+from user?
+    1. entry_points
+    2. states (answer)
+    3. fallbacks
+    4. dispatch

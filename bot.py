@@ -58,9 +58,7 @@ def jobs_formatter(jobs):
     """LOOP THE JOBS ARRAY"""
     for job in jobs:
         formatted_jobs_string += "\n*Company:* {}".format(job["company"])
-        formatted_jobs_string += "\n*Title:* [{}]({})".format(job["title"], job["link"])
-        formatted_jobs_string += "\n*Salary:* {}".format(job["salary"])
-        formatted_jobs_string += "\n[Apply Now]({})".format(job["applyLink"])
+        formatted_jobs_string += "\n*Title:* {}".format(job["title"])
         formatted_jobs_string += "\n\n"
     
     """RETURN THE FORMATTED STRING"""

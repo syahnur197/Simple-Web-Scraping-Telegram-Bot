@@ -22,17 +22,12 @@ class JobCentre:
             company = div.find_all("div", class_="jp_job_post_right_cont")[0].find_all("p")[0].find_all("a")[0].text
             title = div.find_all("div", class_="jp_job_post_right_cont")[0].find_all("h4")[0].find_all("a")[0].text
             salary = div.find_all("li")[0].text
-            link = div.find_all("div", class_="jp_job_post_right_cont")[0].find_all("h4")[0].find_all("a", href=True)[0]['href']
-            URLlink = "http://www.jobcentrebrunei.gov.bn{}".format(link)
-            applyLink = "http://www.jobcentrebrunei.gov.bn/c/portal/login?p_l_id=95?redirectURL={}".format(link)
 
             # put them into a dictionary
             job = {
                 'company' : company,
                 'title' : title,
-                'salary' : "B$ {}".format(salary),
-                'link' : URLlink,
-                'applyLink' : applyLink
+                'salary' : "B$ {}".format(salary)
             }
 
             # append the job dictionary
