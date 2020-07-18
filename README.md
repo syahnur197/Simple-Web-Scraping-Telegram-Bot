@@ -243,4 +243,7 @@ You can see that I retrieved the text the user entered using `update.message.tex
       )
   ```
 
-  
+## Some Nice Examples
+This bot is actually quite simple and I haven't explored a lot of the functionalities outlined in the official documentation. I recommend everyone to have a look at the repository and try to learn from some of the examples in the repo. Personally, I refer to this [example](https://github.com/python-telegram-bot/python-telegram-bot/blob/master/examples/conversationbot2.py) when developing this bot. You can have a look [here](https://github.com/python-telegram-bot/python-telegram-bot/blob/master/examples/README.md) to view other examples.
+
+Have Fun!
