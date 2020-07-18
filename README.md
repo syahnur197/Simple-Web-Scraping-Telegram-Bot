@@ -2,6 +2,8 @@
 
 This repository contains the source code for `Build a Simple Telegram Bot Using Scrapped Data from a Website` which was conducted on **Sunday, 26th of July 2020** for **web.dev** event.
 
+![Job Centre Bot Showcase](https://github.com/syahnur197/Simple-Web-Scraping-Telegram-Bot/blob/master/images/showcase.gif)
+
 ## Requirements
 
 - [Python 3.8](https://www.python.org/downloads/release/python-380/)
