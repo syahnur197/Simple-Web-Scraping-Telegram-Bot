@@ -66,7 +66,7 @@ This repository contains the source code for `Build a Simple Telegram Bot Using 
 company = div.find_all("div", class_="jp_job_post_right_cont")[0].find_all("p")[0].find_all("a")[0].text
 ```
 
-4. For example, the above code I want to extract the text in the first <a> tag, in the first <p> tag, in the first <div> tag with a class of `jp_job_post_right_cont`
+4. For example, the above code I want to extract the text in the first `<a>` tag, in the first `<p>` tag, in the first `<div>` tag with a class of `jp_job_post_right_cont`
 
 
 
