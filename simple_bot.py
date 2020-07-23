@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # define the available states the telegram bot can be
-MY_STATE = range(1)
+INITIAL = range(1)
 
 def greeting(update, context):
     # This is where we get the text the user keyed in
@@ -26,7 +26,7 @@ def greeting(update, context):
         "Your name is {}".format(name)
     )
 
-    return MY_STATE
+    return INITIAL
 
 """RUN THIS IF USER TEXTED /start"""
 def start(update, context):
@@ -36,7 +36,7 @@ def start(update, context):
     update.message.reply_markdown(response)
 
     # return the state of the bot
-    return MY_STATE
+    return INITIAL
 
 
 """JUST TO LOG THE ERROR, NOT IMPORTANT"""
@@ -47,7 +47,7 @@ def error(update, context):
 """WHAT TO DO IF USER ENTERED INVALID COMMAND, NOT IMPORTANT"""
 def fallback(update, context):
     update.message.reply_markdown("Sorry, I couldn't understand your command")
-    return MY_STATE
+    return INITIAL
 
 def main():
     # put the updates in an Updater object
@@ -57,7 +57,7 @@ def main():
     dp = updater.dispatcher
 
     # defining the handler
-    conv_handler = ConversationHandler(
+    conversation_handler = ConversationHandler(
         # what to do when user start the program
         entry_points=[
             CommandHandler('start', start),
@@ -66,7 +66,7 @@ def main():
         # definining the states your bot can assume
         states={
             # the INITIAL state, if your bot in this state, it could only understand the /start command
-            MY_STATE: [
+            INITIAL: [
                 # what to do when the user sends /start to the bot
                 
                 MessageHandler(Filters.regex('/start'), start),
@@ -81,7 +81,7 @@ def main():
     )
 	
     # add a handler to the Dispatcher object
-    dp.add_handler(conv_handler)
+    dp.add_handler(conversation_handler)
 	
     # poll telegram server and continuously request for updates
     updater.start_polling()
