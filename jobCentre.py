@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 
 import requests
+import pprint
 
 jobLink = "https://www.jobcentrebrunei.gov.bn/web/guest/search-job?q={}"
 class JobCentre:
@@ -37,6 +38,10 @@ class JobCentre:
 
             # append the job dictionary
             jobs.append(job)
+
+        # just to view the jobs dictionary
+        # pp = pprint.PrettyPrinter(indent=4)
+        # pp.pprint(jobs)
         return jobs
         
 
@@ -55,3 +60,6 @@ class JobCentre:
 
         # duhh
         return soup 
+
+# p = JobCentre()
+# p.scrape('admin')
