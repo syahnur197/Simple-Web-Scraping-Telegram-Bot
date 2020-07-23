@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 
 from jobCentre import JobCentre
+from bruneida import Bruneida
 
 from telegram.ext import (Updater, CommandHandler, MessageHandler, Filters, ConversationHandler, Dispatcher)
 
@@ -24,10 +25,13 @@ def search_vacancies(update, context):
     searched_keyword = update.message.text
 
     # init new JobCentre class object
-    jc = JobCentre()
+
+    # platform = Bruneida()
+    
+    platform = JobCentre()
 
     # scrape the website based on the keyword
-    jobs = jc.scrape(searched_keyword)
+    jobs = platform.scrape(searched_keyword)
 
     # format the jobs array to nicer looking string
     formatted_jobs_string = jobs_formatter(jobs)
