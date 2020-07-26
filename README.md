@@ -31,9 +31,9 @@ This repository contains the source code for `Build a Simple Telegram Bot Using 
 
 2. cd to the folder
 
-3. run `pipenv install` to install dependencies in `Pipfile.lock`. This will install `BeautifulSoup4`, `requests`, `Python Telegram Bot` modules
+3. run `pipenv shell` to start the virtual environment
 
-4. run `pipenv shell` to start the virtual environment
+4. run `pipenv install` to install dependencies in `Pipfile.lock`. This will install `BeautifulSoup4`, `requests`, `Python Telegram Bot` modules
 
 5. Get the [Telegram Bot Token](https://core.telegram.org/bots#6-botfather) by consulting [BotFather](https://t.me/botfather)
 
